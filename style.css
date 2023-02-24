@@ -1,0 +1,34 @@
+.output {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 70px;
+
+}
+
+#container {
+    display: grid;
+    height: 750px;
+    width: 450px;
+    background-color: rgb(148, 148, 175);
+
+}
+
+.number {
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#numbers {
+        align-self: center;
+    padding: 0px 50px 0px 50px;
+}
+
+#operations {
+    align-items: center;
+}
+
+.op {
+    padding: 30px;
+}
