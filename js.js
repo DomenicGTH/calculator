@@ -3,19 +3,42 @@ let operators = document.querySelectorAll('.op')
 let display = document.querySelector('.output')
 let firstNum = ''
 let secondNum = ''
+let operatorText = ''
+let numberText = ''
+operators.forEach((button) => 
+    button.addEventListener('click' , (e) => {
+            operatorText = e.target.innerText
+            console.log(operatorText);
+    })
+)
 
+numbers.forEach((button) =>
+button.addEventListener('click' , (e) => {
+    numberText = e.target.innerText
+    console.log(numberText);
+}
+));
 function addition() {
-    let addAnswer = firstNum + secondNum
+    if (operatorText === "+") {
+        let addAnswer = firstNum + secondNum
+        return addAnswer;
+    }
 }
 
 function subtract() {
-    let minusAnswer = firstNum - secondNum
-}
+    if (operatorText === "-") {
+        let subAnswer = firstNum + secondNum
+        return subAnswer;
+}}
 function multiply() {
-    let multiAnswer = firstNum * secondNum
-}
+    if (operatorText === "*") {
+        let multiAnswer = firstNum + secondNum
+        return multiAnswer;
+}}
 
 function divide() {
-    divideAnswer = firstNum / secondNum
-}
+    if (operatorText === "/") {
+        let divAnswer = firstNum / secondNum
+        return divAnswer;
+}}
 
