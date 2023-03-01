@@ -13,17 +13,19 @@ let operatorText = ''
 let numberText = ''
 let equalText;
 
+clear.addEventListener('click', (e) => {
+    clearUp()
+})
 
 equal.addEventListener('click', (e) => {
     
-    if (operatorText === '+') {
-        additionOp();
-    }
-});
+        operate()
+        console.log(firstNum.number)
+    });
 
 operators.forEach((button) => 
     button.addEventListener('click' , (e) => {
-            operatorText += e.target.innerText
+            operatorText = e.target.innerText
             
             console.log(operatorText);
     })
@@ -31,16 +33,19 @@ operators.forEach((button) =>
 
 numbers.forEach((button) =>
 button.addEventListener('click' , (e) => {
+    consoleText = e.target.innerText
     numberText += e.target.innerText
-    console.log(numberText)
+    firstNum.number = numberText
+    // not clearing numberText
+    console.log(consoleText)
 }
 ));
 
 function clearUp() {
     operatorText = ''
     numberText = ''
-    firstNum = ''
-    secondNum = ''
+    firstNum = {}
+    secondNum = {}
     equalText = ''
 }
 
