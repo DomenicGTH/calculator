@@ -13,14 +13,16 @@ let operatorText = ''
 let numberText = ''
 let equalText;
 
+
 clear.addEventListener('click', (e) => {
     clearUp()
 })
 
 equal.addEventListener('click', (e) => {
     
-        operate()
+        operate();
         console.log(firstNum.number)
+        display.textContent = `I: ${firstNum.number}`
     });
 
 operators.forEach((button) => 
@@ -56,7 +58,7 @@ function clearUp() {
 // })
 
 
-function additionOp() {
+function additionOp(addA, addB) {
     if (operatorText === '+') {
         let addAnswer = firstNum + secondNum
         return addAnswer;
