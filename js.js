@@ -1,44 +1,111 @@
 let numbers = document.querySelectorAll('.number')
 let operators = document.querySelectorAll('.op')
 let display = document.querySelector('.output')
-let firstNum = ''
-let secondNum = ''
+let equal = document.querySelector('.equals')
+let clear = document.querySelector('.clear')
+let firstNum = {
+    key: ''
+};
+let secondNum = {
+    key: ''
+};
 let operatorText = ''
 let numberText = ''
+let equalText;
+
+
+equal.addEventListener('click', (e) => {
+    
+    if (operatorText === '+') {
+        additionOp();
+    }
+});
+
 operators.forEach((button) => 
     button.addEventListener('click' , (e) => {
-            operatorText = e.target.innerText
+            operatorText += e.target.innerText
+            
             console.log(operatorText);
     })
 )
 
 numbers.forEach((button) =>
 button.addEventListener('click' , (e) => {
-    numberText = e.target.innerText
-    console.log(numberText);
+    numberText += e.target.innerText
+    console.log(numberText)
 }
 ));
-function addition() {
-    if (operatorText === "+") {
-        let addAnswer = firstNum + secondNum
-        return addAnswer;
-    }
+
+function clearUp() {
+    operatorText = ''
+    numberText = ''
+    firstNum = ''
+    secondNum = ''
+    equalText = ''
 }
 
-function subtract() {
+// equal.addEventListener('click', (e) => {
+//     if (operatorText === '+') {
+//         display = addition()
+//     }
+// })
+
+
+function additionOp() {
+    if (operatorText === '+') {
+        let addAnswer = firstNum + secondNum
+        return addAnswer;
+}};
+
+function subtractOp() {
     if (operatorText === "-") {
         let subAnswer = firstNum + secondNum
         return subAnswer;
 }}
-function multiply() {
+function multiplyOp() {
     if (operatorText === "*") {
         let multiAnswer = firstNum + secondNum
         return multiAnswer;
 }}
 
-function divide() {
+function divideOp() {
     if (operatorText === "/") {
         let divAnswer = firstNum / secondNum
         return divAnswer;
 }}
 
+function operate() {
+    if (operatorText === '+') {
+        additionOp();
+    }
+    else if (operatorText === '-') {
+        subtractOp()
+    }
+   else if (operatorText === '*') {
+        multiplyOp()
+    }
+    else if (operatorText === '/') {
+        divideOp()
+    }
+}
+
+
+// operators.forEach((button) => 
+//     button.addEventListener('click', () => inputOp(button.textContent)
+// ));
+
+
+// numbers.forEach((button) => 
+//     button.addEventListener('click', () => InputNum(button.textContent)
+    
+//     ));
+
+//   function InputNum() {
+//     display.textContent += numbers;
+//     console.log(numbers);
+//   }
+
+//   function inputOp() {
+//     display.textcontent += operators;
+//     console.log(operators);
+//   }
