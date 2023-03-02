@@ -10,6 +10,9 @@ body {
     font-size: 50px;
     background: white;
     align-items: center;
+    border-radius: 75px;
+    border-color: black;
+    border-style: groove;
 }
 
 #container {
@@ -17,19 +20,19 @@ body {
     height: 750px;
     width: 450px;
     background-color: rgb(148, 148, 175);
-    margin: auto
+    margin: auto;
+    padding: 30px;
 
 }
 
 .number {
-    padding: 40px;
+    padding: 37px;
+    font-size: 15px;
     border-radius: 10px;
 }
 
 #numbers {
     align-self: center;
-    padding: 0px 50px 0px 50px;
-    margin-left: 20px;
 }
 
 #operations {
@@ -41,4 +44,21 @@ body {
 
 .op {
     padding: 30px;
+    font-size: 15px;
+}
+
+#functions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.equals {
+    padding: 30px;
+    font-size: 15px;
+}
+
+.clear {
+    padding: 30px;
+    font-size: 15px;
 }
